@@ -241,6 +241,11 @@ img {
     justify-items: center;
 }
 
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
 .card {
     background-color: #fff;
     color: #333;
@@ -317,16 +322,28 @@ img {
 }
 
 /* Tablets and under  */
-@media(max-width:836px) {
+@media(max-width:977px) {
     .showcase-image {
         height: 300px;
         width: 250px;
+    }
+
+    .social a {
+        margin: 0 3px;
+    }
+}
+
+@media(max-width:870px) {
+    .footer .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 
 @media(max-width: 768px) {
     .grid,
-    .showcase .grid {
+    .showcase .grid,
+    .footer .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
