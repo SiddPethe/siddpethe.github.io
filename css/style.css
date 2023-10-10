@@ -22,6 +22,10 @@ body {
     text-align: center;
 }
 
+.text-white {
+    color: var(--white-colour);
+}
+
 .my-2 {
     margin: 1.5rem 0;
 }
@@ -199,6 +203,10 @@ img {
 
 .contact input:focus {
     outline: none;
+}
+
+.contact form a {
+    text-decoration: underline;
 }
 
 /* Footer */
