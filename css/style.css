@@ -71,6 +71,11 @@ img {
     background-color: var(--primary-colour);
     color: var(--white-colour);
     height: 70px;
+    opacity: 0;
+    animation-name: fadeIN;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .navbar .ul {
@@ -303,6 +308,16 @@ img {
 }
 
 /* Animations */
+@keyframes fadeIN {
+    0% {
+        opacity: 0;;
+    }
+
+    100% {
+        opacity: 1;;
+    }
+}
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
