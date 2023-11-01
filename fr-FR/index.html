@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Sidd Pethe | Portfolio</title>
 </head>
 <body onload="clearInputs()">
@@ -14,19 +14,19 @@
             <div class="flex">
                 <h4 class="logo"> &copy; code by Sidd</h4>
                 <div class="langs">
-                    <a href="/index.html" class="btn">EN</a>
+                    <a href="/fr-FR/index.html" class="btn">FR</a>
                     <div class="lang-content">
+                        <a href="/index.html" class="btn">EN</a>
                         <a href="/de-DE/index.html" class="btn">DE</a>
-                        <a href="/fr-FR/index.html" class="btn">FR</a>
                     </div>
                 </div>
             </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html" class="btn btn-nobg">Home</a>
-                        <a href="#services " class="btn btn-nobg">Services</a>
-                        <a href="#contact" class="btn btn-nobg">Contact</a>
+                        <a href="../fr-FR/index.html" class="btn btn-nobg">home</a>
+                        <a href="#services " class="btn btn-nobg">des produits</a>
+                        <a href="#contact" class="btn btn-nobg">contacter</a>
                     </li>
                 </ul>
             </nav>
@@ -38,56 +38,56 @@
         <div class="container grid">
             <div class="showcase-text">
                 <h1>Sidd Pethe</h1>
-                <p>Engineer - Developer - Consultant</p>
+                <p>l'ingénieur - le développeur de logicels - consultant</p>
             </div>
             <div class="showcase-image card">
-                <img src="images/SiddPethe.png" alt="SiddPethe" class="profile image-fit">
+                <img src="../images/SiddPethe.png" alt="SiddPethe" class="profile image-fit">
             </div>
         </div>
     </div>
 
     <!-- Services -->
     <div class="services" id="services">
-        <h2 class="md text-center my-2">I offer services in </h2>
+        <h2 class="md text-center my-2">J'offre des services en </h2>
         <div class="container flex">
             <div class="card card-small">
                 <h4>SAP ABAP HANA</h4>
-                <img src="images/sap.png" alt="SAP" class="image-fit">
+                <img src="../images/sap.png" alt="SAP" class="image-fit">
             </div>
 
             <div class="card card-small">
                 <h4>SAP ABAP FIORI</h4>
-                <img src="images/sap.png" alt="SAP" class="image-fit">
+                <img src="../images/sap.png" alt="SAP" class="image-fit">
             </div>
 
             <div class="card card-small">
                 <h4>Python</h4>
-                <img src="images/python_1.png" alt="Python" class="image-fit">
+                <img src="../images/python_1.png" alt="Python" class="image-fit">
             </div>
 
             <div class="card card-small">
                 <h4>Django</h4>
-                <img src="images/django.png" alt="SAP" class="image-fit">
+                <img src="../images/django.png" alt="SAP" class="image-fit">
             </div>
 
             <div class="card card-small">
                 <h4>Symfony</h4>
-                <a href="images/symfony_udemy.pdf" target="_blank"><img src="images/symfony.png" alt="Symfony" class="image-fit"></a>                
+                <a href="../images/symfony_udemy.pdf" target="_blank"><img src="../images/symfony.png" alt="Symfony" class="image-fit"></a>                
             </div>
 
             <div class="card card-small">
                 <h4>Node. js</h4>
-                <img src="images/node.png" alt="PHP" class="image-fit">
+                <img src="../images/node.png" alt="PHP" class="image-fit">
             </div>
 
             <div class="card card-small">
                 <h4>MongoDB</h4>
-                <img src="images/mongodb.png" alt="MongoDB" class="image-fit">
+                <img src="../images/mongodb.png" alt="MongoDB" class="image-fit">
             </div>
 
             <div class="card card-small">
                 <h4>SQL</h4>
-                <img src="images/sql.png" alt="SAP" class="image-fit">
+                <img src="../images/sql.png" alt="SAP" class="image-fit">
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
     <!-- Contact -->
     <div class="contact" id="contact">
         <div class="container">
-                <h2 class="text-center">Lets work together </h2>
+                <h2 class="text-center">Collaborons ?</h2>
                 <form action="https://formspree.io/f/myyqlyyj" onsubmit="clearInputs()" method="POST">
                     <div class="grid">
                         <div class="form-control">
@@ -107,22 +107,22 @@
                     </div>
                     <div class="grid">
                         <div class="form-control">
-                            <input type="text" name="company" placeholder="Company / Organisation">
+                            <input type="text" name="company" placeholder="Société / association">
                         </div>
                         <div class="form-control">
-                            <input type="text" name="services" placeholder="What services are you looking for?" required>
+                            <input type="text" name="services" placeholder="Quels sont les services que vous cherchez?" required>
                         </div>
                     </div>
                     <div>
                         <div class="form-control">
-                            <input type="text" name="message" placeholder="Your message" required>
+                            <input type="text" name="message" placeholder="Votre message" required>
                         </div>
                     </div>
                     <div class="text-center">
                         <!-- type button to be used with Formspree -->
                         <!-- <input type="submit" value="Send" class="btn btn-light"> -->
-                        <button class="btn btn-light">Send</button>
-                        <p class="text-white">* All form submissions are managed by <a href="https://formspree.io/" target="_blank" class="text-white">Formspree</a></p>
+                        <button class="btn btn-light">Envoyer</button>
+                        <p class="text-white">* Toutes les soumissions de formulaire sont gérées par <a href="https://formspree.io/" target="_blank" class="text-white">Formspree</a></p>
                     </div>
                 </form>
         </div>
@@ -164,6 +164,6 @@
     
 
     <!-- JS Scripts -->
-    <script type="text/javascript" src="js/forms.js"></script>
+    <script type="text/javascript" src="../js/forms.js"></script>
 </body>
 </html>
