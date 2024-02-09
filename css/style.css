@@ -110,10 +110,6 @@ img {
     font-size: 80px;
 }
 
-.showcase p {
-    font-size: 35px;
-    margin: 20px 0;
-}
 .showcase .grid {
     overflow: visible;
     grid-template-columns:  2fr 1fr;
@@ -121,6 +117,17 @@ img {
 
 .showcase-text {
     animation: slideInFromLeft 1s ease-in;
+    align-self: start;
+}
+
+.showcase-text p:nth-child(even){
+    font-size: 35px;
+    /* margin: 20px 0; */
+}
+
+.showcase-text p:nth-child(odd){
+    font-size: 25px;
+    /* margin: 20px 0; */
 }
 
 .showcase-image {
