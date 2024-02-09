@@ -130,6 +130,17 @@ img {
     /* margin: 20px 0; */
 }
 
+.showcase-text p:last-child{
+    font-size: 20px;
+    /* margin: 20px 0; */
+}
+
+.showcase-text a{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: #fff 1px solid;
+}
+
 .showcase-image {
     position: relative;
     height: 400px;
