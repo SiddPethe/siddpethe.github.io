@@ -8,7 +8,7 @@
     <link href="../images/apple-touch-icon_182.png" rel="apple-touch-icon">
     <!-- Favicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Main CSS Style -->
+    <!-- Main CSS Files -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- Title -->
     <title>Sidd Pethe | Portfolio</title>
@@ -21,26 +21,26 @@
                 <h4 class="logo"> &copy; code by Sidd</h4>
                 <a href="/index.html" class="btn">EN</a>
                 <p> <i class="fa-solid fa-earth-asia"></i>&nbsp; Pune, Indien</p>
-                <!-- <div class="langs">
-                    <a href="/index.html" class="btn">EN</a>
-                    <a href="/fr-FR/index.html" class="btn btn-small">FR</a>
-                </div> -->
             </div>
             <nav>
-                <ul>
-                    <li>
-                        <a href="../de-DE/index.html" class="btn btn-nobg">Home</a>
-                        <a href="#services " class="btn btn-nobg">Dienste</a>
-                        <a href="#contact" class="btn btn-nobg">Kontakt</a>
-                    </li>
+                <ul class="navbar-links" id="navbar-links">
+                    <li><a href="../de-DE/index.html" class="btn btn-nobg">Home</a></li>
+                    <li><a href="#services " class="btn btn-nobg">Dienste</a></li>
+                    <li><a href="#contact" class="btn btn-nobg">Kontakt</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="dropdown-menu">
+                <li><a href="../de-DE/index.html" class="btn">Home</a></li>
+                <li><a href="#services " class="btn">Dienste</a></li>
+                <li><a href="#contact" class="btn">Kontakt</a></li>
+            </div>
         </div>
     </div>
 
     <!-- Showcase -->
     <div class="showcase">
-        <div class="container grid">
+        <div class="container grid web-showcase">
             <div class="showcase-text">
                 <h1>Sidd Pethe</h1>
                 <p>Ingenieur - Entwickler - Berater</p>
@@ -49,6 +49,19 @@
             </div>
             <div class="showcase-image card">
                 <img src="../images/SiddPethe.png" alt="SiddPethe" class="profile image-fit">
+            </div>
+        </div>
+        <div class="container grid mobile-showcase">
+            <div class="showcase-text">
+                <h1>Sidd Pethe</h1>
+            </div>
+            <div class="showcase-image card">
+                <img src="../images/SiddPethe.png" alt="SiddPethe" class="profile image-fit">
+            </div>
+            <div class="showcase-info">
+                <p id="word-line" class="word-line">Ingenieur - Entwickler - Berater</p>
+                <p id="about-line">Ein Maschinenbauingenieur wurde zum SAP ABAP-Berater</p>
+                <p><a href="assets/documents/SiddPethe_CV.pdf" target="_blank">Lebenslauf (SiddPethe.pdf)</a></p>
             </div>
         </div>
     </div>
@@ -138,6 +151,7 @@
     <!-- Footer -->
     <footer class="footer bg-dark py-1">
         <div class="container grid grid-4">
+            <h4 class="logo-footer"> &copy; code by Sidd</h4>
             <a href="mailto:siddpethe@gmail.com">
                 <div>
                     <h4 class="text-white btn btn-light-round">
@@ -168,9 +182,9 @@
             </div>
         </div>
     </footer>
-    
 
     <!-- JS Scripts -->
     <script type="text/javascript" src="../js/forms.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
 </body>
 </html>
