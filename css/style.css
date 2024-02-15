@@ -30,6 +30,14 @@ body {
     margin: 1.5rem 0;
 }
 
+.mx-2 {
+    margin-left: 1rem;
+}
+
+.mx-r-2 {
+    margin-right: 1rem;
+}
+
 .md {
     font-size: 2rem;
 }
@@ -46,9 +54,13 @@ ul {
     list-style-type: none;
 }
 
+li {
+    list-style-type: none;
+}
+
 a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
 }
 
 h1, h2, h4 {
@@ -76,9 +88,11 @@ img {
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
+    z-index: 101;
+    position: relative;
 }
 
-.navbar .ul {
+.navbar ul {
     display: flex;
 }
 
@@ -88,14 +102,41 @@ img {
     margin: 0 5px;
 }
 
-.langs {
-    /* position: relative;  */
-    float: left;
-    overflow: hidden;
-}
-
 .navbar .flex {
     justify-content: space-between;
+}
+
+.navbar .menu-toggle {
+    cursor: pointer;
+    padding: 5px 10px;
+    display: none;
+}
+
+/* Dropdown Manu */
+.navbar .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition:  height 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar .dropdown-menu.open {
+    height: auto;
+}
+
+.navbar .dropdown-menu li, .navbar .dropdown-menu .btn  {
+    align-self: center;
+    background: none;
+    color: #383d5f;
+    font-weight: bold;
 }
 
 /* Showcase */
@@ -104,6 +145,10 @@ img {
     background-color: var(--primary-colour);
     color: #fff;
     position: relative;
+}
+
+.showcase .mobile-showcase{
+    display: none;
 }
 
 .showcase h1 {
@@ -143,9 +188,9 @@ img {
 
 .showcase-image {
     position: relative;
+    z-index: 100;
     height: 400px;
     width: 350px;
-    z-index: 100;
     animation: slideInFromRight 1s ease-in;
 }
 .showcase-image .profile {
@@ -244,6 +289,10 @@ img {
     margin: 0 10px;
 }
 
+.footer .logo-footer {
+    display: none;
+}
+
 /* Utilities */
 .container {
     max-width: 1200px;
@@ -336,6 +385,25 @@ img {
     border-radius: 50px;
 }
 
+/* Displays */
+.dispay-flex-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.dispay-flex-rows {
+    display: flex;
+    flex-direction: row;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
 /* Animations */
 @keyframes fadeIN {
     0% {
@@ -389,7 +457,11 @@ img {
     }
 }
 
-@media(max-width:870px) {
+@media(max-width:876px) {
+    .showcase {
+        height: 450px;
+    }
+    
     .footer .grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -398,8 +470,7 @@ img {
 
 @media(max-width: 768px) {
     .grid,
-    .showcase .grid,
-    .footer .grid {
+    .showcase .grid{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
@@ -407,6 +478,38 @@ img {
     .showcase {
         height: auto;
         text-align: center;
+    }
+
+    .showcase .web-showcase{
+        display: none;
+    }
+
+    .showcase .mobile-showcase{
+        display: grid;
+    }
+
+    .showcase .mobile-showcase a {
+        border-bottom: 1px solid #fff;
+    }
+
+    .showcase::before,
+    .showcase::after {
+        height: 0px;
+    }
+
+    .showcase-info p:nth-child(even){
+        font-size: 25px;
+        /* margin: 20px 0; */
+    }
+    
+    .showcase-info p:nth-child(odd){
+        font-size: 30px;
+        /* margin: 20px 0; */
+    }
+    
+    .showcase-info p:last-child{
+        font-size: 20px;
+        /* margin: 20px 0; */
     }
 
     .showcase-image {
@@ -420,19 +523,49 @@ img {
     
 }
 
+/* Table & Mobile */
+@media(max-width: 586px) {
+    .navbar .navbar-links {
+        display: none;
+    }
+
+    .navbar .menu-toggle {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .navbar .dropdown-menu {
+        display: flex;
+    }
+}
 
 /* Mobile */
-@media(max-width: 200x) {
-    .navbar {
-        height: 110px;
+@media(max-width: 495px) {
+    .showcase-info p:nth-child(even){
+        font-size: 20px;
+        /* margin: 20px 0; */
     }
-
-    .navbar .flex {
-        flex-direction: column;
+    
+    .showcase-info p:nth-child(odd){
+        font-size: 25px;
+        /* margin: 20px 0; */
     }
-
-    .navbar ul {
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.1);
+    
+    .showcase-info p:last-child{
+        font-size: 15px;
+        /* margin: 20px 0; */
+    }
+    
+    .navbar .logo {
+        display: none;
+    }
+    
+    .footer .grid {
+        grid-template-columns: 1fr;
+        grid-row: 1fr;
+    }
+    
+    .footer .logo-footer {
+        display: block;
     }
 }
