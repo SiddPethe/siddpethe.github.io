@@ -1,34 +1,42 @@
 # This actions updates the release branch when tag prod is pushed.
 name: Tab based Deployment 
 
+# Configure to deploy on tag push
 on:
   push:
     tags:
       - "prod"
 
-# Adds write permissions.
+# Adds permissions.
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  update_ralease_branch:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-        with: 
-          fetch-depth: 0
-          ref: release
-      - name: Point release branch to new tag on master
-        run: |
-          TAG=${GITHUB_REF#refs/tags/}
-          echo "Updating release branch to tag $TAG"
-          git checkout release
-          git reset --hard tags/$TAG
-          git push -f
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site (root folder)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./   
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
       - name: Configure Git identity
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Create release date tag
         run: |
           DATE=$(date +'%Y-%m-%d-%H%M')
