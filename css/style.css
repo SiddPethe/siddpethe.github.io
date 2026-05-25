@@ -219,8 +219,17 @@ img {
     animation: slideInFromBottom 1s ease-in;
 }
 
+.services .container {
+    overflow: visible;
+    width: 100%;
+    padding: 0;
+}
+
 .services .flex {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
 }
 
 .services .card {
@@ -445,6 +454,12 @@ img {
     }
 }
 
+@media (max-width:1250px) {
+    .services .flex {
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}
+
 /* Tablets and under  */
 @media(max-width:977px) {
     .showcase-image {
@@ -520,6 +535,10 @@ img {
     .services {
         animation: slideInFromLeft 1s ease-in;
     }
+
+    .services .flex {
+        grid-template-columns: repeat(4, 1fr); 
+    }
     
 }
 
@@ -554,6 +573,10 @@ img {
     .showcase-info p:last-child{
         font-size: 15px;
         /* margin: 20px 0; */
+    }
+
+    .services .flex {
+        grid-template-columns: repeat(2, 1fr); 
     }
     
     .navbar .logo {
